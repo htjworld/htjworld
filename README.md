@@ -1,4 +1,4 @@
-# hi, I'm TaeJin 👋
+# HELLO, this is **htjWORLD** 🌐
 
 [![Blog](https://img.shields.io/badge/Blog-htjworld.github.io-black?style=flat-square)](https://htjworld.github.io/) — 3D city blog. each building is a post  
 [![Velog](https://img.shields.io/badge/Velog-@htjworld-20c997?style=flat-square)](https://velog.io/@htjworld/posts) — technical writing on backend & AI  
