@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="660">
+  <style>
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .blink { animation: blink 1s step-end infinite; }
+  </style>
+
+  <!-- Terminal background -->
+  <rect width="680" height="660" fill="#0d1117" rx="12"/>
+
+  <!-- Title bar -->
+  <rect width="680" height="36" fill="#21262d" rx="12"/>
+  <rect y="24" width="680" height="12" fill="#21262d"/>
+
+  <!-- Traffic light dots -->
+  <circle cx="18" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="36" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="54" cy="18" r="6" fill="#28c840"/>
+
+  <!-- Bar title -->
+  <text x="340" y="23" font-family="Courier New, monospace" font-size="12" fill="#8b949e" text-anchor="middle">htjworld — bash</text>
+
+  <!-- ASCII art -->
+  <text x="24" y="67"  font-family="Courier New, monospace" font-size="11" fill="#58a6ff" xml:space="preserve"> _     _    _                    _     _ </text>
+  <text x="24" y="81"  font-family="Courier New, monospace" font-size="11" fill="#58a6ff" xml:space="preserve">| |__ | |_ (_)_      _____  _ __| | __| |</text>
+  <text x="24" y="95"  font-family="Courier New, monospace" font-size="11" fill="#58a6ff" xml:space="preserve">| '_ \| __|| \ \ /\ / / _ \| '__| |/ _` |</text>
+  <text x="24" y="109" font-family="Courier New, monospace" font-size="11" fill="#58a6ff" xml:space="preserve">| | | | |_ | |\ V  V / (_) | |  | | (_| |</text>
+  <text x="24" y="123" font-family="Courier New, monospace" font-size="11" fill="#58a6ff" xml:space="preserve">|_| |_|\__|/ | \_/\_/ \___/|_|  |_|\__,_|</text>
+  <text x="24" y="137" font-family="Courier New, monospace" font-size="11" fill="#58a6ff" xml:space="preserve">         |__/                            </text>
+
+  <!-- Contact -->
+  <text x="24" y="154" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#fafaf8">✍️  </tspan><tspan fill="#00d4e8">velog.io/@htjworld</tspan><tspan fill="#fafaf8">     ✉️  </tspan><tspan fill="#ff0090">itjhan01@gmail.com</tspan></text>
+
+  <!-- whoami -->
+  <text x="24" y="200" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#58a6ff">htjworld@github:~$ </tspan><tspan fill="#fafaf8">whoami</tspan></text>
+  <text x="24" y="223" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#3fb950">Han Taejin</tspan><tspan fill="#fafaf8">  </tspan><tspan fill="#6e7681"># Backend &amp; AI Developer</tspan></text>
+
+  <!-- cat skills.json -->
+  <text x="24" y="269" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#58a6ff">htjworld@github:~$ </tspan><tspan fill="#fafaf8">cat skills.json</tspan></text>
+  <text x="24" y="292" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#6e7681">{</tspan></text>
+  <text x="24" y="315" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#6e7681">  </tspan><tspan fill="#d29922">"languages"</tspan><tspan fill="#fafaf8">: </tspan><tspan fill="#6e7681">[</tspan><tspan fill="#3fb950">"Python"</tspan><tspan fill="#6e7681">, </tspan><tspan fill="#3fb950">"Java"</tspan><tspan fill="#6e7681">, </tspan><tspan fill="#3fb950">"TypeScript"</tspan><tspan fill="#6e7681">]</tspan><tspan fill="#fafaf8">,</tspan></text>
+  <text x="24" y="338" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#6e7681">  </tspan><tspan fill="#d29922">"backend"</tspan><tspan fill="#fafaf8">:  </tspan><tspan fill="#6e7681">[</tspan><tspan fill="#3fb950">"Spring Boot"</tspan><tspan fill="#6e7681">, </tspan><tspan fill="#3fb950">"Node.js"</tspan><tspan fill="#6e7681">]</tspan><tspan fill="#fafaf8">,</tspan></text>
+  <text x="24" y="361" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#6e7681">  </tspan><tspan fill="#d29922">"devops"</tspan><tspan fill="#fafaf8">:    </tspan><tspan fill="#6e7681">[</tspan><tspan fill="#3fb950">"Docker"</tspan><tspan fill="#6e7681">, </tspan><tspan fill="#3fb950">"Railway"</tspan><tspan fill="#6e7681">, </tspan><tspan fill="#3fb950">"GitHub Actions"</tspan><tspan fill="#6e7681">]</tspan></text>
+  <text x="24" y="384" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#6e7681">}</tspan></text>
+
+  <!-- ls ./projects -->
+  <text x="24" y="430" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#58a6ff">htjworld@github:~$ </tspan><tspan fill="#fafaf8">ls ./projects</tspan></text>
+  <text x="24" y="453" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#39d353">art-bridge</tspan><tspan fill="#fafaf8">    </tspan><tspan fill="#39d353">ask-archive</tspan><tspan fill="#fafaf8">    </tspan><tspan fill="#39d353">art-run</tspan><tspan fill="#fafaf8">    </tspan><tspan fill="#39d353">dynamic-web-crawler</tspan></text>
+
+  <!-- cat status.txt -->
+  <text x="24" y="499" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#58a6ff">htjworld@github:~$ </tspan><tspan fill="#fafaf8">cat status.txt</tspan></text>
+  <text x="24" y="522" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#3fb950">✓</tspan><tspan fill="#fafaf8"> Kakao MCP Player10 — </tspan><tspan fill="#FEE500">Top 3 finalist</tspan></text>
+  <text x="24" y="545" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#3fb950">✓</tspan><tspan fill="#fafaf8"> Samsung SW Grade A</tspan></text>
+  <text x="24" y="568" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#3fb950">✓</tspan><tspan fill="#fafaf8"> 10+ automation projects — </tspan><tspan fill="#6e7681">Kmong freelancer</tspan></text>
+  <text x="24" y="591" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#3fb950">✓</tspan><tspan fill="#fafaf8"> SSAFY 15th — </tspan><tspan fill="#6e7681">currently enrolled</tspan></text>
+
+  <!-- Final prompt -->
+  <text x="24" y="637" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#58a6ff">htjworld@github:~$ </tspan></text>
+
+  <!-- Blinking cursor -->
+  <rect class="blink" x="172" y="624" width="8" height="14" fill="#58a6ff"/>
+</svg>
