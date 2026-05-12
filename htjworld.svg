@@ -57,5 +57,5 @@
   <text x="24" y="637" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#58a6ff">htjworld@github:~$ </tspan></text>
 
   <!-- Blinking cursor -->
-  <rect class="blink" x="172" y="624" width="8" height="14" fill="#58a6ff"/>
+  <rect class="blink" x="172" y="627" width="8" height="13" fill="#58a6ff"/>
 </svg>
