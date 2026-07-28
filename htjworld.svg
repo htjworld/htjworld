@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="660">
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="706">
   <style>
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
     .blink { animation: blink 1s step-end infinite; }
   </style>
 
   <!-- Terminal background -->
-  <rect width="680" height="660" fill="#0d1117" rx="12"/>
+  <rect width="680" height="706" fill="#0d1117" rx="12"/>
 
   <!-- Title bar -->
   <rect width="680" height="36" fill="#21262d" rx="12"/>
@@ -50,12 +50,14 @@
   <text x="24" y="499" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#58a6ff">htjworld@github:~$ </tspan><tspan fill="#fafaf8">cat status.txt</tspan></text>
   <text x="24" y="522" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#3fb950">✓</tspan><tspan fill="#fafaf8"> Kakao MCP Player10 — </tspan><tspan fill="#FEE500">Top 3 finalist</tspan></text>
   <text x="24" y="545" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#3fb950">✓</tspan><tspan fill="#fafaf8"> Samsung SW Grade A</tspan></text>
-  <text x="24" y="568" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#3fb950">✓</tspan><tspan fill="#fafaf8"> 10+ automation projects — </tspan><tspan fill="#6e7681">Kmong freelancer</tspan></text>
-  <text x="24" y="591" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#3fb950">✓</tspan><tspan fill="#fafaf8"> SSAFY 15th — </tspan><tspan fill="#6e7681">currently enrolled</tspan></text>
+  <text x="24" y="568" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#3fb950">✓</tspan><tspan fill="#fafaf8"> SQLD — </tspan><tspan fill="#6e7681">SQL Developer national certification</tspan></text>
+  <text x="24" y="591" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#3fb950">✓</tspan><tspan fill="#fafaf8"> Kmong freelancer — </tspan><tspan fill="#6e7681">10+ automation projects</tspan></text>
+  <text x="24" y="614" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#3fb950">✓</tspan><tspan fill="#fafaf8"> SSAFY 15th — </tspan><tspan fill="#6e7681">completed</tspan></text>
+  <text x="24" y="637" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#3fb950">✓</tspan><tspan fill="#fafaf8"> Braindeck — AI Fullstack Engineer</tspan></text>
 
   <!-- Final prompt -->
-  <text x="24" y="637" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#58a6ff">htjworld@github:~$ </tspan></text>
+  <text x="24" y="683" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#58a6ff">htjworld@github:~$ </tspan></text>
 
   <!-- Blinking cursor -->
-  <rect class="blink" x="172" y="627" width="8" height="13" fill="#58a6ff"/>
+  <rect class="blink" x="172" y="673" width="8" height="13" fill="#58a6ff"/>
 </svg>
