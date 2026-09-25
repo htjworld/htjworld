@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>htjworld</title>
+<style>
+  :root { color-scheme: dark; --bg: #0d1117; --btn: #8b949e; }
+  html, body { margin: 0; height: 100%; background: var(--bg); overflow-x: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  .stage { display: flex; align-items: center; gap: 0; max-width: 100%; }
+  .viewport { width: 680px; max-width: calc(100vw - 80px); aspect-ratio: 680 / 706; overflow: hidden; }
+  .track { display: flex; height: 100%; transition: transform .45s cubic-bezier(.4, 0, .2, 1); }
+  .track img { flex: 0 0 100%; width: 100%; height: 100%; display: block; }
+  .nav { width: 40px; height: 40px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+  .nav[hidden] { display: grid !important; visibility: hidden; }
+  .nav svg { width: 24px; height: 24px; }
+  .nav:focus-visible { outline: 1px solid var(--btn); outline-offset: 2px; border-radius: 50%; }
+  @media (prefers-reduced-motion: reduce) { .track { transition: none; } }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <button class="nav" id="prev" aria-label="이전" hidden>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11.5" fill="#6e7681" fill-opacity=".18" stroke="#8b949e"/><path d="M14 7 9 12l5 5" fill="none" stroke="#8b949e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="viewport">
+      <div class="track" id="track">
+        <img src="./htjworld.svg" alt="htjworld terminal">
+        <img src="./htjworld-logo.svg" alt="HTJWORLD">
+      </div>
+    </div>
+    <button class="nav" id="next" aria-label="다음">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11.5" fill="#6e7681" fill-opacity=".18" stroke="#8b949e"/><path d="m10 7 5 5-5 5" fill="none" stroke="#8b949e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+<script>
+  const track = document.getElementById('track');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  const last = track.children.length - 1;
+  let cur = 0;
+  function go(i) {
+    cur = Math.max(0, Math.min(last, i));
+    track.style.transform = `translateX(${-cur * 100}%)`;
+    prev.hidden = cur === 0;
+    next.hidden = cur === last;
+  }
+  prev.addEventListener('click', () => go(cur - 1));
+  next.addEventListener('click', () => go(cur + 1));
+  addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') go(cur - 1);
+    if (e.key === 'ArrowRight') go(cur + 1);
+  });
+  go(0);
+  // arriving from the README's › button: continue the slide the click started
+  if (location.hash === '#2') requestAnimationFrame(() => setTimeout(() => go(1), 120));
+</script>
+</body>
+</html>
