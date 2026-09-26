@@ -1,1 +1,1 @@
-<pre><a href="#s2r"><img src="./slide-1.svg" alt="htjworld terminal" align="top" width="100%"></a>  <span id="s2l">  </span><a href="#s1r"><img src="./slide-2.svg" alt="HTJWORLD" align="top" width="100%"></a><span id="s2r">  </span>  <a href="#s2l"><img src="./slide-1.svg" alt="" align="top" width="100%"></a><span id="s1r">  </span> </pre>
+<p align="center"><img src="./terminal.svg" alt="htjworld terminal" width="680"></p>
