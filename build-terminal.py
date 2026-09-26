@@ -1,5 +1,5 @@
 # htjworld.svg / htjworld-logo.svg 수정 후 `python3 build-terminal.py` 로 terminal.svg 재생성
-# 시작 화면 = htjworld.svg. 프롬프트에 명령을 차례로 타이핑하고, 출력이 나오면 오래된 줄은 위로 밀려난다.
+# 시작 화면 = htjworld.svg. 프롬프트에 명령을 차례로 타이핑하고, 출력은 한 줄씩 찍히며 오래된 줄은 위로 밀려난다.
 import re
 
 PROMPT = "htjworld@github:~$ "
@@ -7,6 +7,7 @@ X0, CHAR_W = 24, 7.8          # Courier New 13px 한 글자 폭 (원본 커서 x
 BOTTOM = 683                  # 프롬프트 줄이 머무는 화면 baseline
 CLIP_TOP, CLIP_BOTTOM = 48, 700
 IDLE_FIRST, IDLE, CHAR_T, ENTER_T = 4.0, 2.4, 0.09, 0.35
+LINE_T = 0.05                 # 출력 한 줄이 찍히는 간격
 
 def texts(src, section):
     """<!-- section --> 주석 뒤부터 다음 주석 전까지의 (y, <text> 마크업) 목록"""
@@ -46,15 +47,24 @@ def prompt_line(y, cmd=""):
     return f'<text x="{X0}" y="{y:g}" font-family="Courier New, monospace" font-size="13" xml:space="preserve"><tspan fill="#58a6ff">{PROMPT}</tspan>{tail}</text>'
 
 # --- 타임라인 ---
-t, events = 0.0, []                 # events: (시각, 이벤트)
-enter_t = []
-for k, (cmd, _, _) in enumerate(blocks):
+# 명령을 타이핑 → 엔터 → 출력이 한 줄씩 빠르게 찍히며 화면이 한 줄씩 올라감 → 다음 프롬프트.
+t = 0.0
+char_t, enter_t, shown_t = [], [], [0.0]   # shown_t[k]: k 번째 프롬프트가 뜬 시각
+line_t, scroll = [], [(0.0, prompt_y[0] - BOTTOM)]
+for k, (cmd, out, adv) in enumerate(blocks):
     t += IDLE_FIRST if k == 0 else IDLE
-    for i in range(len(cmd)):
-        events.append((t + i * CHAR_T, ("char", k, i)))
+    char_t.append([t + i * CHAR_T for i in range(len(cmd))])
     t += len(cmd) * CHAR_T + ENTER_T
     enter_t.append(t)
-T = enter_t[-1]                     # 마지막 명령의 엔터 = 시작 화면과 동일 → 여기서 루프
+    line_t.append([])
+    for dy, _ in out:
+        line_t[k].append(t)
+        scroll.append((t, prompt_y[k] + dy - BOTTOM))
+        t += LINE_T
+    shown_t.append(t)
+    scroll.append((t, prompt_y[k] + adv - BOTTOM))
+T = shown_t[-1]                     # 마지막 출력 뒤 새 프롬프트 = 시작 화면과 동일 → 여기서 루프
+scroll = scroll[:-1]
 pct = lambda s: f"{s / T * 100:.3f}%"
 
 css, groups = [], {}                # groups: 등장 시각 → 요소들
@@ -70,29 +80,22 @@ for cmd, out, adv in blocks:        # A: 전부 보이는 과거 출력
     y += adv
 
 b_parts = [prompt_line(prompt_y[0])]   # B 첫 프롬프트는 처음부터 보인다
-for k, (cmd, out, adv) in enumerate(blocks[:-1]):
+for k, (cmd, out, adv) in enumerate(blocks):
     py = prompt_y[k]
     for i, ch in enumerate(cmd):
-        appear(events[sum(len(b[0]) for b in blocks[:k]) + i][0],
-               f'<text x="{X0 + (len(PROMPT) + i) * CHAR_W:g}" y="{py:g}" font-family="Courier New, monospace" font-size="13" fill="#fafaf8" xml:space="preserve">{ch}</text>')
-    for dy, m in out:
-        appear(enter_t[k], at(m, py + dy))
-    appear(enter_t[k], prompt_line(prompt_y[k + 1]))
-# 마지막 블록(status)의 글자 타이핑만 보인다. 출력은 루프가 돌아 A 가 대신 보여준다.
-k = len(blocks) - 1
-for i, ch in enumerate(blocks[k][0]):
-    appear(events[sum(len(b[0]) for b in blocks[:k]) + i][0],
-           f'<text x="{X0 + (len(PROMPT) + i) * CHAR_W:g}" y="{prompt_y[k]:g}" font-family="Courier New, monospace" font-size="13" fill="#fafaf8" xml:space="preserve">{ch}</text>')
+        appear(char_t[k][i], f'<text x="{X0 + (len(PROMPT) + i) * CHAR_W:g}" y="{py:g}" font-family="Courier New, monospace" font-size="13" fill="#fafaf8" xml:space="preserve">{ch}</text>')
+    for (dy, m), lt in zip(out, line_t[k]):
+        appear(lt, at(m, py + dy))
+    if k + 1 < len(blocks):          # 마지막 블록 뒤 프롬프트는 루프가 돌아 A 가 대신 보여준다
+        appear(shown_t[k + 1], prompt_line(prompt_y[k + 1]))
 
 for n, (time, items) in enumerate(sorted(groups.items())):
     css.append(f"@keyframes a{n}{{0%{{opacity:0}}{pct(time)}{{opacity:1}}}}.a{n}{{opacity:0;animation:a{n} {T:.2f}s step-end infinite}}")
     b_parts += [m.replace("<text ", f'<text class="a{n}" ', 1) for m in items]
 
-# 스크롤: 엔터마다 새 프롬프트가 BOTTOM 에 오도록 테이프를 올린다.
-off0 = prompt_y[0] - BOTTOM
-scroll = [f"0%{{transform:translateY({-off0:g}px)}}"] + [
-    f"{pct(enter_t[k])}{{transform:translateY({-(prompt_y[k + 1] - BOTTOM):g}px)}}" for k in range(len(blocks) - 1)]
-css.append(f"@keyframes scroll{{{''.join(scroll)}}}.tape{{animation:scroll {T:.2f}s step-end infinite}}")
+off0 = scroll[0][1]
+css.append(f"@keyframes scroll{{{''.join(f'{pct(s)}{{transform:translateY({-o:g}px)}}' for s, o in scroll)}}}"
+           f".tape{{animation:scroll {T:.2f}s step-end infinite}}")
 
 # 가림막: 스크롤 상태마다 제목줄 아래에 반쯤 잘린 줄이 보이지 않도록 그 줄까지 배경색으로 덮는다.
 lines = [(float(re.search(r'\by="([\d.]+)"', m).group(1)), float(re.search(r'font-size="([\d.]+)"', m).group(1)))
@@ -100,18 +103,14 @@ lines = [(float(re.search(r'\by="([\d.]+)"', m).group(1)), float(re.search(r'fon
 def cover(off):
     cut = [y - off + 4 for y, fs in lines if y - off - fs < CLIP_TOP < y - off + 4]
     return max([CLIP_TOP] + cut)
-offs = [off0] + [prompt_y[k + 1] - BOTTOM for k in range(len(blocks) - 1)]
-cov = [f"0%{{transform:translateY({cover(offs[0]):g}px)}}"] + [
-    f"{pct(enter_t[k])}{{transform:translateY({cover(offs[k + 1]):g}px)}}" for k in range(len(blocks) - 1)]
-css.append(f"@keyframes cover{{{''.join(cov)}}}.cover{{animation:cover {T:.2f}s step-end infinite}}")
+css.append(f"@keyframes cover{{{''.join(f'{pct(s)}{{transform:translateY({cover(o):g}px)}}' for s, o in scroll)}}}"
+           f".cover{{animation:cover {T:.2f}s step-end infinite}}")
 
 # 커서: 프롬프트마다 하나. 등장 → 글자마다 오른쪽으로 → 엔터에 사라짐.
 cursors = []
 for k, (cmd, _, _) in enumerate(blocks):
-    shown = 0 if k == 0 else enter_t[k - 1]
-    first = sum(len(b[0]) for b in blocks[:k])
-    op = [f"0%{{opacity:{1 if k == 0 else 0}}}"] + ([f"{pct(shown)}{{opacity:1}}"] if k else []) + [f"{pct(enter_t[k])}{{opacity:0}}"]
-    mv = ["0%{transform:translateX(0)}"] + [f"{pct(events[first + i][0])}{{transform:translateX({(i + 1) * CHAR_W:g}px)}}" for i in range(len(cmd))]
+    op = [f"0%{{opacity:{1 if k == 0 else 0}}}"] + ([f"{pct(shown_t[k])}{{opacity:1}}"] if k else []) + [f"{pct(enter_t[k])}{{opacity:0}}"]
+    mv = ["0%{transform:translateX(0)}"] + [f"{pct(ct)}{{transform:translateX({(i + 1) * CHAR_W:g}px)}}" for i, ct in enumerate(char_t[k])]
     css.append(f"@keyframes co{k}{{{''.join(op)}}}@keyframes cm{k}{{{''.join(mv)}}}"
                f".c{k}{{opacity:{1 if k == 0 else 0};animation:co{k} {T:.2f}s step-end infinite,cm{k} {T:.2f}s step-end infinite}}")
     cursors.append(f'<g class="c{k}"><rect class="blink" x="{X0 + len(PROMPT) * CHAR_W:g}" y="{prompt_y[k] - 10:g}" width="8" height="13" fill="#58a6ff"/></g>')
