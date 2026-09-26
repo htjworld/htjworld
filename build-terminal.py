@@ -7,7 +7,7 @@ X0, CHAR_W = 24, 7.8          # Courier New 13px 한 글자 폭 (원본 커서 x
 BOTTOM = 683                  # 프롬프트 줄이 머무는 화면 baseline
 CLIP_TOP, CLIP_BOTTOM = 48, 700
 IDLE_FIRST, IDLE, CHAR_T, ENTER_T = 4.0, 2.4, 0.09, 0.35
-LINE_T, BURST_T = 0.05, 0.07  # 한 줄 출력은 0.05초, 여러 줄 출력은 전체가 0.07초 안에 한 줄씩
+LINE_T, BURST_T = 0.05, 0.05   # 한 줄 출력은 0.05초, 여러 줄 출력은 프레임 지연(~16ms) 포함 0.07초 안에 끝까지
 
 def texts(src, section):
     """<!-- section --> 주석 뒤부터 다음 주석 전까지의 (y, <text> 마크업) 목록"""
