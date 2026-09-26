@@ -7,7 +7,7 @@ X0, CHAR_W = 24, 7.8          # Courier New 13px 한 글자 폭 (원본 커서 x
 BOTTOM = 683                  # 프롬프트 줄이 머무는 화면 baseline
 CLIP_TOP, CLIP_BOTTOM = 48, 700
 IDLE_FIRST, IDLE, CHAR_T, ENTER_T = 4.0, 2.4, 0.09, 0.35
-LINE_T = 0.05                 # 출력 한 줄이 찍히는 간격
+LINE_T, BURST_T = 0.05, 0.07  # 한 줄 출력은 0.05초, 여러 줄 출력은 전체가 0.07초 안에 한 줄씩
 
 def texts(src, section):
     """<!-- section --> 주석 뒤부터 다음 주석 전까지의 (y, <text> 마크업) 목록"""
@@ -60,7 +60,7 @@ for k, (cmd, out, adv) in enumerate(blocks):
     for dy, _ in out:
         line_t[k].append(t)
         scroll.append((t, prompt_y[k] + dy - BOTTOM))
-        t += LINE_T
+        t += LINE_T if len(out) == 1 else BURST_T / len(out)
     shown_t.append(t)
     scroll.append((t, prompt_y[k] + adv - BOTTOM))
 T = shown_t[-1]                     # 마지막 출력 뒤 새 프롬프트 = 시작 화면과 동일 → 여기서 루프
