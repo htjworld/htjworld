@@ -1,12 +1,1 @@
-<div align="center">
-<details name="slide" open>
-<summary><samp>01 · whoami</samp>
-<details name="slide">
-<summary><samp>02 · htjworld!</samp></summary>
-<p></p>
-<img src="./htjworld-logo.svg" alt="HTJWORLD" width="680">
-</details>
-</summary>
-<img src="./htjworld.svg" alt="htjworld terminal" width="680">
-</details>
-</div>
+<pre><a href="#s2r"><img src="./slide-1.svg" alt="htjworld terminal" align="top" width="100%"></a>  <span id="s2l">  </span><a href="#s1r"><img src="./slide-2.svg" alt="HTJWORLD" align="top" width="100%"></a><span id="s2r">  </span>  <a href="#s2l"><img src="./slide-1.svg" alt="" align="top" width="100%"></a><span id="s1r">  </span> </pre>
