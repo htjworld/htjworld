@@ -64,21 +64,17 @@ def text_badge(name: str, lines: list[str], font: int, accent: str) -> None:
     )
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{SIZE}" height="{SIZE}" viewBox="0 0 {SIZE} {SIZE}">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#1b2230"/>
-      <stop offset="1" stop-color="#0d1117"/>
-    </linearGradient>
     <style>
       {FONT_FACE}
       .badge {{ cursor: pointer; }}
       .badge .ring {{ transition: stroke-width .2s ease, fill .2s ease; }}
-      .badge text {{ fill: #f0f6fc; transition: fill .2s ease; }}
+      .badge text {{ fill: #111111; transition: fill .2s ease; }}
       .badge:hover .ring {{ stroke-width: 5; fill: {accent}22; }}
       .badge:hover text {{ fill: {accent}; }}
     </style>
   </defs>
   <g class="badge">
-    <circle class="ring" cx="{SIZE/2}" cy="{SIZE/2}" r="{SIZE/2-3}" fill="url(#bg)" stroke="{accent}" stroke-width="2.5"/>
+    <circle class="ring" cx="{SIZE/2}" cy="{SIZE/2}" r="{SIZE/2-3}" fill="#ffffff" stroke="{accent}" stroke-width="2.5"/>
     {tspans}
   </g>
 </svg>

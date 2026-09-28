@@ -1,9 +1,9 @@
 <table align="center" cellspacing="0" cellpadding="14"><tr>
 
 <td align="center" valign="middle">
-<a href="mailto:htjworld@gmail.com"><img src="./badges/gmail.svg" width="74" alt="Gmail"></a>
+<a href="mailto:htjworld@gmail.com" target="_blank" rel="noopener"><img src="./badges/gmail.svg" width="74" alt="Gmail"></a>
 <br><br>
-<a href="https://velog.io/@htjworld"><img src="./badges/velog.svg" width="74" alt="velog"></a>
+<a href="https://velog.io/@htjworld" target="_blank" rel="noopener"><img src="./badges/velog.svg" width="74" alt="velog"></a>
 </td>
 
 <td align="center" valign="middle">
@@ -11,15 +11,15 @@
 </td>
 
 <td align="center" valign="middle">
-<a href="https://finfeeds.vercel.app/"><img src="./badges/finfeeds.svg" width="74" alt="finfeeds"></a>
+<a href="https://finfeeds.vercel.app/" target="_blank" rel="noopener"><img src="./badges/finfeeds.svg" width="74" alt="finfeeds"></a>
 <br><br>
-<a href="https://htjworld.github.io/art-run/"><img src="./badges/art-run.svg" width="74" alt="art-run"></a>
+<a href="https://htjworld.github.io/art-run/" target="_blank" rel="noopener"><img src="./badges/art-run.svg" width="74" alt="art-run"></a>
 <br><br>
-<a href="https://htjworld.github.io/krachwerk/"><img src="./badges/krachwerk.svg" width="74" alt="krachwerk"></a>
+<a href="https://htjworld.github.io/krachwerk/" target="_blank" rel="noopener"><img src="./badges/krachwerk.svg" width="74" alt="krachwerk"></a>
 <br><br>
-<a href="https://htjworld.github.io/photo-booth/"><img src="./badges/photo-booth.svg" width="74" alt="photo-booth"></a>
+<a href="https://htjworld.github.io/photo-booth/" target="_blank" rel="noopener"><img src="./badges/photo-booth.svg" width="74" alt="photo-booth"></a>
 <br><br>
-<a href="https://htjworld.github.io/drift-lanterns/"><img src="./badges/drift-lanterns.svg" width="74" alt="drift-lanterns"></a>
+<a href="https://htjworld.github.io/drift-lanterns/" target="_blank" rel="noopener"><img src="./badges/drift-lanterns.svg" width="74" alt="drift-lanterns"></a>
 </td>
 
 </tr></table>
