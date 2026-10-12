@@ -2,8 +2,8 @@
 """Render htjworld_logo.png: "HTJ" over "WORLD" in Rubik Bubbles, transparent, wide crop.
 
 Both lines share one font size, so WORLD sticks out past HTJ on both sides.
-Lines are drawn on an oversized canvas, then cropped to the ink with a small
-top/bottom padding.
+Lines are drawn on an oversized canvas, then cropped to the ink: flush left/right
+(README stretches it to full width), small top/bottom padding.
 """
 from pathlib import Path
 
@@ -12,8 +12,8 @@ from PIL import Image, ImageDraw, ImageFont
 HERE = Path(__file__).parent
 FONT = HERE / "RubikBubbles-Regular.ttf"
 WIDTH = 2400                     # output width
-FILL_RATIO = 0.92                # WORLD's width / output width (rest = side padding)
-PAD_Y = 40                       # top/bottom transparent margin in px
+FILL_RATIO = 0.92                # sizes the font; sides are trimmed to the ink afterwards
+PAD_Y = 80                       # top/bottom transparent margin in px
 LINE_GAP = 0.08                  # gap between lines, as a fraction of font size
 LINES = [
     [("H", (20, 193, 241)), ("T", (30, 225, 160)), ("J", (235, 45, 125))],
@@ -41,7 +41,7 @@ for line in LINES:
         x += font.getlength(ch)
     y += (b - t) + fs * LINE_GAP
 
-_, top, _, bottom = img.getbbox()
-img = img.crop((0, top - PAD_Y, WIDTH, bottom + PAD_Y))
+left, top, right, bottom = img.getbbox()
+img = img.crop((left, top - PAD_Y, right, bottom + PAD_Y))
 img.save(HERE / "htjworld_logo.png", optimize=True)
 print("wrote htjworld_logo.png", img.size, "font", fs)
