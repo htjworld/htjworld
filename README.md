@@ -13,7 +13,7 @@
 <table align="center">
 <tr><th colspan="6">PROJECTS</th></tr>
 <tr>
-<td align="center"><a href="https://github.com/htjworld"><img src="./badges/art-bridge.svg" width="74" alt="art-bridge"></a></td>
+<td align="center"><a href="https://github.com/htjworld/art-bridge"><img src="./badges/art-bridge.svg" width="74" alt="art-bridge"></a></td>
 <td align="center"><a href="https://finfeeds.vercel.app/"><img src="./badges/finfeeds.svg" width="74" alt="finfeeds"></a></td>
 <td align="center"><a href="https://htjworld.github.io/art-run/"><img src="./badges/art-run.svg" width="74" alt="art-run"></a></td>
 <td align="center"><a href="https://htjworld.github.io/krachwerk/"><img src="./badges/krachwerk.svg" width="74" alt="krachwerk"></a></td>
