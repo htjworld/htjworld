@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render htj_logo.png: "HTJ" over "WORLD" in Rubik Bubbles, transparent, wide crop.
+"""Render htjworld_logo.png: "HTJ" over "WORLD" in Rubik Bubbles, transparent, wide crop.
 
 Both lines share one font size, so WORLD sticks out past HTJ on both sides.
 Lines are drawn on an oversized canvas, then cropped to the ink with a small
@@ -43,5 +43,5 @@ for line in LINES:
 
 _, top, _, bottom = img.getbbox()
 img = img.crop((0, top - PAD_Y, WIDTH, bottom + PAD_Y))
-img.save(HERE / "htj_logo.png", optimize=True)
-print("wrote htj_logo.png", img.size, "font", fs)
+img.save(HERE / "htjworld_logo.png", optimize=True)
+print("wrote htjworld_logo.png", img.size, "font", fs)
