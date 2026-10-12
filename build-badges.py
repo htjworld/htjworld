@@ -111,6 +111,7 @@ logo_badge("velog", LOGO_DIR / "velog-logo.png", logo_frac=0.60)
 
 # Right column — vibe-coding projects (Rubik Mono One label, per-project accent).
 # Rubik Mono One is wide, so long words use a smaller size; tune here if needed.
+text_badge("art-bridge", ["art", "bridge"], font=25, accent="#ff9f1c")  # orange
 text_badge("finfeeds", ["finfeeds"], font=19, accent="#3fb950")       # green
 text_badge("art-run", ["art", "run"], font=30, accent="#2dd4bf")      # turquoise
 text_badge("krachwerk", ["krach", "werk"], font=25, accent="#75fb4c")  # official neon
