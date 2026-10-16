@@ -1,0 +1,146 @@
+{
+  "generatedAt": "2026-10-16T02:21:47.775Z",
+  "user": "htjworld",
+  "items": [
+    {
+      "id": "PR_kwDOBN0Z8c7XfRsp",
+      "key": "python/cpython#149246",
+      "repo": "python/cpython",
+      "owner": "python",
+      "title": "statistics: Fix geometric_mean() error message for negative inputs",
+      "url": "https://github.com/python/cpython/pull/149246",
+      "mergedAt": "2026-05-02T03:54:24Z",
+      "isPrivate": false,
+      "stars": 77570,
+      "language": {
+        "name": "Python",
+        "color": "#3572A5"
+      },
+      "imageUrl": null,
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1525981?s=128&v=4",
+      "source": "merged",
+      "aliases": [],
+      "gone": false
+    },
+    {
+      "id": "PR_kwDOBN0Z8c7aSzPv",
+      "key": "python/cpython#149683",
+      "repo": "python/cpython",
+      "owner": "python",
+      "title": "gh-131178: Fix mimetypes CLI docs to mention that errors go to stdout",
+      "url": "https://github.com/python/cpython/pull/149683",
+      "mergedAt": "2026-05-31T07:45:49Z",
+      "isPrivate": false,
+      "stars": 77570,
+      "language": {
+        "name": "Python",
+        "color": "#3572A5"
+      },
+      "imageUrl": null,
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1525981?s=128&v=4",
+      "source": "merged",
+      "aliases": [],
+      "gone": false
+    },
+    {
+      "id": "PR_kwDOSgHci870SBgl",
+      "key": "htjworld/fin-feed#2",
+      "repo": "htjworld/fin-feed",
+      "owner": "htjworld",
+      "title": "Dev",
+      "url": "https://github.com/htjworld/fin-feed/pull/2",
+      "mergedAt": "2026-07-21T09:44:54Z",
+      "isPrivate": false,
+      "stars": 2,
+      "language": {
+        "name": "Java",
+        "color": "#b07219"
+      },
+      "imageUrl": null,
+      "avatarUrl": "https://avatars.githubusercontent.com/u/116538001?s=128&u=a9a07102f42284ca50cf50d0a7ac1c4f4194b0f1&v=4",
+      "source": "merged",
+      "aliases": [],
+      "gone": false
+    },
+    {
+      "id": "PR_kwDOAGAU1s7W_mhP",
+      "key": "spring-projects/spring-boot#50256",
+      "repo": "spring-projects/spring-boot",
+      "owner": "spring-projects",
+      "title": "Include security error body in WebFlux Cloud Foundry endpoint responses",
+      "url": "https://github.com/spring-projects/spring-boot/pull/50256",
+      "mergedAt": "2026-09-09T12:53:02Z",
+      "isPrivate": false,
+      "stars": 81633,
+      "language": {
+        "name": "Java",
+        "color": "#b07219"
+      },
+      "imageUrl": null,
+      "avatarUrl": "https://avatars.githubusercontent.com/u/317776?s=128&v=4",
+      "source": "merged",
+      "aliases": [],
+      "gone": false
+    },
+    {
+      "id": "PR_kwDOAGAU1s7Yc5CG",
+      "key": "spring-projects/spring-boot#50296",
+      "repo": "spring-projects/spring-boot",
+      "owner": "spring-projects",
+      "title": "Retain probe defaults when configuring other properties on probe health groups",
+      "url": "https://github.com/spring-projects/spring-boot/pull/50296",
+      "mergedAt": "2026-09-16T10:46:49Z",
+      "isPrivate": false,
+      "stars": 81633,
+      "language": {
+        "name": "Java",
+        "color": "#b07219"
+      },
+      "imageUrl": null,
+      "avatarUrl": "https://avatars.githubusercontent.com/u/317776?s=128&v=4",
+      "source": "merged",
+      "aliases": [],
+      "gone": false
+    },
+    {
+      "id": "PR_kwDOPfbZuM8AAAABH6K_AA",
+      "key": "osaurus-ai/osaurus#3069",
+      "repo": "osaurus-ai/osaurus",
+      "owner": "osaurus-ai",
+      "title": "fix /api/show 404 for external models listed by repo name",
+      "url": "https://github.com/osaurus-ai/osaurus/pull/3069",
+      "mergedAt": "2026-10-12T08:48:02Z",
+      "isPrivate": false,
+      "stars": 8049,
+      "language": {
+        "name": "Swift",
+        "color": "#F05138"
+      },
+      "imageUrl": null,
+      "avatarUrl": "https://avatars.githubusercontent.com/u/259953775?s=128&v=4",
+      "source": "merged",
+      "aliases": [],
+      "gone": false
+    },
+    {
+      "id": "PR_kwDOS4HNr88AAAABIFZJ0w",
+      "key": "DietrichGebert/ponytail#1115",
+      "repo": "DietrichGebert/ponytail",
+      "owner": "DietrichGebert",
+      "title": "fix(qoder): keep the ruleset on the /ponytail default turn",
+      "url": "https://github.com/DietrichGebert/ponytail/pull/1115",
+      "mergedAt": "2026-10-15T00:25:02Z",
+      "isPrivate": false,
+      "stars": 164475,
+      "language": {
+        "name": "JavaScript",
+        "color": "#f1e05a"
+      },
+      "imageUrl": "https://repository-images.githubusercontent.com/1266797999/b20d9cb8-11f0-4db8-965a-7e22ab2b6bb6",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/137048761?s=128&u=fa5643ba9b6ff39e8a68c56316756ae3931c06b6&v=4",
+      "source": "merged",
+      "aliases": [],
+      "gone": false
+    }
+  ]
+}
