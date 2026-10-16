@@ -1,6 +1,4 @@
 <p align="center">
-<img src="./htjworld_logo.png" alt="htjworld logo" width="100%">
-<br>
 <img src="./terminal.svg" alt="htjworld terminal" width="680">
 </p>
 
