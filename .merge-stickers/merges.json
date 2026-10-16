@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T02:21:47.775Z",
+  "generatedAt": "2026-10-16T02:50:17.263Z",
   "user": "htjworld",
   "items": [
     {
@@ -11,7 +11,7 @@
       "url": "https://github.com/python/cpython/pull/149246",
       "mergedAt": "2026-05-02T03:54:24Z",
       "isPrivate": false,
-      "stars": 77570,
+      "stars": 77571,
       "language": {
         "name": "Python",
         "color": "#3572A5"
@@ -20,7 +20,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1525981?s=128&v=4",
       "source": "merged",
       "aliases": [],
-      "gone": false
+      "gone": false,
+      "readmeImage": null
     },
     {
       "id": "PR_kwDOBN0Z8c7aSzPv",
@@ -31,7 +32,7 @@
       "url": "https://github.com/python/cpython/pull/149683",
       "mergedAt": "2026-05-31T07:45:49Z",
       "isPrivate": false,
-      "stars": 77570,
+      "stars": 77571,
       "language": {
         "name": "Python",
         "color": "#3572A5"
@@ -40,7 +41,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1525981?s=128&v=4",
       "source": "merged",
       "aliases": [],
-      "gone": false
+      "gone": false,
+      "readmeImage": null
     },
     {
       "id": "PR_kwDOSgHci870SBgl",
@@ -60,7 +62,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/116538001?s=128&u=a9a07102f42284ca50cf50d0a7ac1c4f4194b0f1&v=4",
       "source": "merged",
       "aliases": [],
-      "gone": false
+      "gone": false,
+      "readmeImage": "https://skillicons.dev/icons?i=nextjs,vercel"
     },
     {
       "id": "PR_kwDOAGAU1s7W_mhP",
@@ -80,7 +83,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/317776?s=128&v=4",
       "source": "merged",
       "aliases": [],
-      "gone": false
+      "gone": false,
+      "readmeImage": null
     },
     {
       "id": "PR_kwDOAGAU1s7Yc5CG",
@@ -100,7 +104,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/317776?s=128&v=4",
       "source": "merged",
       "aliases": [],
-      "gone": false
+      "gone": false,
+      "readmeImage": null
     },
     {
       "id": "PR_kwDOPfbZuM8AAAABH6K_AA",
@@ -120,7 +125,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/259953775?s=128&v=4",
       "source": "merged",
       "aliases": [],
-      "gone": false
+      "gone": false,
+      "readmeImage": "https://github.com/user-attachments/assets/d7905005-71fe-41ba-b69f-e8968af29b5c"
     },
     {
       "id": "PR_kwDOS4HNr88AAAABIFZJ0w",
@@ -131,7 +137,7 @@
       "url": "https://github.com/DietrichGebert/ponytail/pull/1115",
       "mergedAt": "2026-10-15T00:25:02Z",
       "isPrivate": false,
-      "stars": 164475,
+      "stars": 164496,
       "language": {
         "name": "JavaScript",
         "color": "#f1e05a"
@@ -140,7 +146,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/137048761?s=128&u=fa5643ba9b6ff39e8a68c56316756ae3931c06b6&v=4",
       "source": "merged",
       "aliases": [],
-      "gone": false
+      "gone": false,
+      "readmeImage": "https://raw.githubusercontent.com/DietrichGebert/ponytail/HEAD/assets/logo.png"
     }
   ]
 }
