@@ -7,45 +7,47 @@
 # user: your-login
 timezone: Asia/Seoul
 
-visibility: public   # public(공개만) | private(비공개만) | all(전부). private/all은 repo 스코프 PAT 필요
+visibility: public # public(공개만) | private(비공개만) | all(전부). private/all은 repo 스코프 PAT 필요
 private:
-  display: mask              # mask(자물쇠, 이름 제거) | hide | show
+  display: mask # mask(자물쇠, 이름 제거) | hide | show
 
 include:
-  own: false                 # 내 소유 레포의 머지도 포함할지
-  owners: []                 # 비우면 전체
+  own: false # 내 소유 레포의 머지도 포함할지
+  owners: [] # 비우면 전체
 exclude:
-  repos: []                  # 예: ["my-company/*"]
-  prs: []                    # 예: ["owner/repo#123"] (현재 이름, 예전 이름, PR id 모두 가능)
+  repos: [] # 예: ["my-company/*"]
+  prs: [] # 예: ["owner/repo#123"] (현재 이름, 예전 이름, PR id 모두 가능)
   titleContains: []
-  before: null               # 예: 2022-01-01
+  before: null # 예: 2022-01-01
   minStars: 0
 
 layout:
   columns: 10
-  slots: auto                # auto | 숫자 | none
-  order: asc                 # asc | desc
-  groupBy: pr                # pr(PR마다 스티커 1장, 레포의 N번째 머지가 단계 결정) | repo(레포당 1장 + xN)
+  slots: auto # auto | 숫자 | none
+  order: asc # asc | desc
+  groupBy: pr # pr(PR마다 스티커 1장, 레포의 N번째 머지가 단계 결정) | repo(레포당 1장 + xN)
 
 header:
-  stat: stars                # 세 번째 통계: stars(기여한 레포 스타 합) | since | latest | owners
-  colors:                    # 헤더 숫자 색: auto(랜덤, 서로 다른 색) 또는 "#RRGGBB"
+  stat: stars # 세 번째 통계: stars(기여한 레포 스타 합) | since | latest | owners
+  colors:
+    # 헤더 숫자 색: auto(랜덤, 서로 다른 색) 또는 "#RRGGBB"
     merged: auto
     repos: auto
     third: auto
-  buttons: true              # 헤더 왼쪽 설정, 오른쪽 fetch 버튼 (README는 보는 사람을 못 가려서 모두에게 보이지만 주인만 동작)
+  buttons: true # 헤더 왼쪽 설정, 오른쪽 fetch 버튼 (README는 보는 사람을 못 가려서 모두에게 보이지만 주인만 동작)
   # settingsUrl: https://...   # 버튼 링크를 직접 지정 (기본: config.yml 편집 페이지, 워크플로우 실행 페이지)
   # fetchUrl: https://...
 
-theme: paper                 # paper | holo | midnight | minimal
+theme: paper # paper | holo | midnight | minimal
 sticker:
   size: 72
-  variation: 0.6             # 0(정렬) ~ 1(자유분방)
-  image: auto                # auto(README 첫 이미지 > 소셜 프리뷰 > 아바타) | readme | social | avatar | language
-  animate: true              # 동 이상 단계의 반짝임 (끄면 정지 이미지)
-  color: unique              # 컬러 단계 테두리색: unique(스티커마다 다른 색) | "#RRGGBB" 하나로 통일
-  tier: auto                 # auto | white color bronze silver gold platinum diamond (전부 한 단계로 고정)
-  thresholds:                # 레포의 PR이 몇 개일 때 해당 단계가 되는지
+  variation: 0.6 # 0(정렬) ~ 1(자유분방)
+  image: auto # auto(README 첫 이미지 > 소셜 프리뷰 > 아바타) | readme | social | avatar | language
+  animate: true # 동 이상 단계의 반짝임 (끄면 정지 이미지)
+  color: unique # 컬러 단계 테두리색: unique(스티커마다 다른 색) | "#RRGGBB" 하나로 통일
+  tier: auto # auto | white color bronze silver gold platinum diamond (전부 한 단계로 고정)
+  thresholds:
+    # 레포의 PR이 몇 개일 때 해당 단계가 되는지
     bronze: 10
     silver: 20
     gold: 30
@@ -53,7 +55,7 @@ sticker:
     diamond: 50
 
 output:
-  mode: html                 # html(클릭 가능) | table | sheet
+  mode: html # html(클릭 가능) | table | sheet
   dir: assets/merge-stickers
   readme: README.md
 
