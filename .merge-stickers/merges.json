@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T20:20:30.129Z",
+  "generatedAt": "2026-10-19T05:55:28.199Z",
   "user": "htjworld",
   "items": [
     {
@@ -11,7 +11,7 @@
       "url": "https://github.com/python/cpython/pull/149246",
       "mergedAt": "2026-05-02T03:54:24Z",
       "isPrivate": false,
-      "stars": 77674,
+      "stars": 77742,
       "language": {
         "name": "Python",
         "color": "#3572A5"
@@ -32,7 +32,7 @@
       "url": "https://github.com/python/cpython/pull/149683",
       "mergedAt": "2026-05-31T07:45:49Z",
       "isPrivate": false,
-      "stars": 77674,
+      "stars": 77742,
       "language": {
         "name": "Python",
         "color": "#3572A5"
@@ -74,7 +74,7 @@
       "url": "https://github.com/spring-projects/spring-boot/pull/50256",
       "mergedAt": "2026-09-09T12:53:02Z",
       "isPrivate": false,
-      "stars": 81708,
+      "stars": 81772,
       "language": {
         "name": "Java",
         "color": "#b07219"
@@ -95,7 +95,7 @@
       "url": "https://github.com/spring-projects/spring-boot/pull/50296",
       "mergedAt": "2026-09-16T10:46:49Z",
       "isPrivate": false,
-      "stars": 81708,
+      "stars": 81772,
       "language": {
         "name": "Java",
         "color": "#b07219"
@@ -137,7 +137,7 @@
       "url": "https://github.com/DietrichGebert/ponytail/pull/1115",
       "mergedAt": "2026-10-15T00:25:02Z",
       "isPrivate": false,
-      "stars": 166955,
+      "stars": 167221,
       "language": {
         "name": "JavaScript",
         "color": "#f1e05a"
