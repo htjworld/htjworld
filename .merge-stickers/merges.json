@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T05:55:28.199Z",
+  "generatedAt": "2026-10-22T01:06:28.213Z",
   "user": "htjworld",
   "items": [
     {
@@ -11,7 +11,7 @@
       "url": "https://github.com/python/cpython/pull/149246",
       "mergedAt": "2026-05-02T03:54:24Z",
       "isPrivate": false,
-      "stars": 77742,
+      "stars": 77727,
       "language": {
         "name": "Python",
         "color": "#3572A5"
@@ -32,7 +32,7 @@
       "url": "https://github.com/python/cpython/pull/149683",
       "mergedAt": "2026-05-31T07:45:49Z",
       "isPrivate": false,
-      "stars": 77742,
+      "stars": 77727,
       "language": {
         "name": "Python",
         "color": "#3572A5"
@@ -74,7 +74,7 @@
       "url": "https://github.com/spring-projects/spring-boot/pull/50256",
       "mergedAt": "2026-09-09T12:53:02Z",
       "isPrivate": false,
-      "stars": 81772,
+      "stars": 81754,
       "language": {
         "name": "Java",
         "color": "#b07219"
@@ -95,7 +95,7 @@
       "url": "https://github.com/spring-projects/spring-boot/pull/50296",
       "mergedAt": "2026-09-16T10:46:49Z",
       "isPrivate": false,
-      "stars": 81772,
+      "stars": 81754,
       "language": {
         "name": "Java",
         "color": "#b07219"
@@ -116,7 +116,7 @@
       "url": "https://github.com/osaurus-ai/osaurus/pull/3069",
       "mergedAt": "2026-10-12T08:48:02Z",
       "isPrivate": false,
-      "stars": 8055,
+      "stars": 8065,
       "language": {
         "name": "Swift",
         "color": "#F05138"
@@ -137,7 +137,7 @@
       "url": "https://github.com/DietrichGebert/ponytail/pull/1115",
       "mergedAt": "2026-10-15T00:25:02Z",
       "isPrivate": false,
-      "stars": 167221,
+      "stars": 171658,
       "language": {
         "name": "JavaScript",
         "color": "#f1e05a"
@@ -148,6 +148,27 @@
       "aliases": [],
       "gone": false,
       "readmeImage": "https://raw.githubusercontent.com/DietrichGebert/ponytail/HEAD/assets/logo.png"
+    },
+    {
+      "id": "PR_kwDOQb6kR88AAAABH-bgAA",
+      "key": "openclaw/openclaw#169921",
+      "repo": "openclaw/openclaw",
+      "owner": "openclaw",
+      "title": "fix(agents): Control UI reports a failed turn when a plugin silently claims it with before_agent_reply",
+      "url": "https://github.com/openclaw/openclaw/pull/169921",
+      "mergedAt": "2026-10-21T20:29:01Z",
+      "isPrivate": false,
+      "stars": 392700,
+      "language": {
+        "name": "TypeScript",
+        "color": "#3178c6"
+      },
+      "imageUrl": null,
+      "avatarUrl": "https://avatars.githubusercontent.com/u/252820863?s=128&v=4",
+      "source": "merged",
+      "aliases": [],
+      "gone": false,
+      "readmeImage": "https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-banner-dark.png"
     }
   ]
 }
